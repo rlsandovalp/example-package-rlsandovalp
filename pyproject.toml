@@ -6,8 +6,11 @@ build-backend = "hatchling.build"
 
 [project] 
 name = "example_package_rlsandovalp" 
-version = "0.1.0" 
+dynamic = ["version"] 
 dependencies = ["numpy"]
 
 [project.optional-dependencies]
 test = ["pytest"]
+
+[tool.hatch]
+version.path = "src/example_package_rlsandovalp/__init__.py"
